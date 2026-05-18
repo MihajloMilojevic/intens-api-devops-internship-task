@@ -45,4 +45,5 @@ jobs:
         run: |
           terraform apply -auto-approve \
             -var="project_id=${{ env.PROJECT_ID }}" \
-            -var="region=${{ env.REGION }}"
+            -var="region=${{ env.REGION }}" \
+            -var="image_tag=${{ github.sha }}"

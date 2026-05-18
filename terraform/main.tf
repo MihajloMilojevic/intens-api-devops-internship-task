@@ -34,7 +34,7 @@ resource "google_cloud_run_service" "intens_api" {
     spec {
       containers {
         # This image path is built from your Artifact Registry repo
-        image = "${var.region}-docker.pkg.dev/${var.project_id}/intens-api/intens-api:latest"
+        image = "${var.region}-docker.pkg.dev/${var.project_id}/intens-api/intens-api:${var.image_tag}"
 
         resources {
           limits = {

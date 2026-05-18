@@ -8,3 +8,9 @@ variable "region" {
   type        = string
   default     = "europe-west3"
 }
+
+variable "image_tag" {
+  description = "Docker image tag (commit SHA)"
+  type        = string
+  default     = "latest"
+}
